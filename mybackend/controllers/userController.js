@@ -77,7 +77,7 @@ const login = (req, res) => {
                     }
                     if(bResult){
                         //console.log(JWT_SECRET);
-                        const token = jwt.sign({id:result[0].id}, JWT_SECRET, {expiresIn:'1h'});
+                        const token = jwt.sign({id:result[0].id}, JWT_SECRET, {expiresIn:'1d'});
                         return res.status(200).send({
                             msg:'logged In',
                             token,
