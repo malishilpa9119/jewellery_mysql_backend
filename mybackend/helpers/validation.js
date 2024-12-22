@@ -24,7 +24,7 @@ exports.imageValidation = [
   check("imageUrl")
     .custom((value, { req }) => {
       if (!req.file) {
-        throw new Error("File is required");
+        throw new Error("Please upload an image of type PNG, JPG, SVG, or GIF");
       }
 
       const validMimeTypes = ["image/jpeg", "image/png", "image/svg+xml", "image/gif"];
